@@ -27,6 +27,9 @@
             <tr th:each="pet : ${petsList}">
                 <td scope="row" th:text="${pet.name}"></td>
                 <td scope="row" th:text="${pet.raca}"></td>
+                <td>
+                    <a th:href="@{/pet/delete/{id}(id=${pet.id})}">Deletar</a>
+                </td>
             </tr>
         </tbody>
     </table>
