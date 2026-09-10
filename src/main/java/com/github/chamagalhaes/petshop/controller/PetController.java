@@ -38,4 +38,11 @@ public class PetController {
         this.petService.deletePetById(id);
         return "redirect:/pet";
     }
+
+    @GetMapping("/pet/edit/{id}")
+    public String edit(@PathVariable Long id, Model model) {
+        Pet pet = petService.getPetById(id);
+        model.addAttribute("pet", pet);
+        return "petshop/edit";
+    }
 }
