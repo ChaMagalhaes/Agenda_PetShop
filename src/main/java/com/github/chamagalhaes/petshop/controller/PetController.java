@@ -34,7 +34,7 @@ public class PetController {
         System.out.println(pet);
         if(result.hasErrors()) {
             model.addAttribute("pet", pet);
-            return "pet/create";
+            return "petshop/create";
         }
         petService.savePet(pet);
         return "redirect:/pet";
